@@ -2,9 +2,36 @@
 const canvas = document.getElementById('arbolCanvas');
 const ctx = canvas.getContext('2d');
 
-// Configurar dimensiones del canvas
-canvas.width = 800;
-canvas.height = 600;
+// Configurar dimensiones del canvas de forma responsive
+function ajustarCanvas() {
+    const maxWidth = 800;
+    const maxHeight = 600;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    // Ajustar para móviles
+    if (windowWidth < 768) {
+        canvas.width = Math.min(windowWidth - 40, 500);
+        canvas.height = Math.min(windowHeight - 150, 500);
+    } else if (windowWidth < 1024) {
+        canvas.width = Math.min(windowWidth - 60, 600);
+        canvas.height = Math.min(windowHeight - 100, 550);
+    } else {
+        canvas.width = maxWidth;
+        canvas.height = maxHeight;
+    }
+}
+
+// Llamar al inicio y cuando cambie el tamaño de ventana
+ajustarCanvas();
+window.addEventListener('resize', () => {
+    ajustarCanvas();
+    // Limpiar y recrear elementos si es necesario
+    lucesArbol = [];
+    adornosArbol = [];
+    crearLucesArbol();
+    crearAdornos();
+});
 
 // Variables globales
 let animationId;

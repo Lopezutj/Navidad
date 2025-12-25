@@ -151,3 +151,151 @@ body {
 .audio-btn:active {
     transform: scale(0.95);
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    #by {
+        font-size: 18px;
+        top: 5px;
+        left: 5px;
+    }
+    
+    .mensaje-inicio {
+        padding: 30px;
+        margin: 0 20px;
+    }
+    
+    .mensaje-inicio h2 {
+        font-size: 2rem;
+    }
+    
+    .mensaje-inicio p {
+        font-size: 1rem;
+    }
+    
+    .btn-iniciar {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .audio-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    #by {
+        font-size: 14px;
+        top: 5px;
+        left: 5px;
+        max-width: calc(100% - 10px);
+        text-align: left;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    #arbolCanvas {
+        max-width: calc(100vw - 40px);
+        max-height: calc(100vh - 150px);
+        margin: 0 auto;
+    }
+    
+    .mensaje-inicio {
+        padding: 25px 20px;
+        margin: 0 15px;
+        border-radius: 15px;
+    }
+    
+    .mensaje-inicio h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .mensaje-inicio p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .btn-iniciar {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    
+    .audio-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+        border: 2px solid #fff;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    #by {
+        font-size: 12px;
+    }
+    
+    .mensaje-inicio {
+        padding: 20px 15px;
+        margin: 0 10px;
+    }
+    
+    .mensaje-inicio h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .mensaje-inicio p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    .btn-iniciar {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .audio-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    #arbolCanvas {
+        max-height: calc(100vh - 100px);
+    }
+    
+    #by {
+        font-size: 11px;
+    }
+    
+    .mensaje-inicio {
+        padding: 15px;
+    }
+    
+    .mensaje-inicio h2 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .mensaje-inicio p {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+}
