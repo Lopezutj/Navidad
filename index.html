@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pino de Navidad Animado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Overlay de inicio para reproducir música -->
+    <div id="overlayInicio">
+        <div class="mensaje-inicio">
+            <h2>🎄 Feliz Navidad 🎄</h2>
+            <p>Haz clic para reproducir la música</p>
+            <button id="btnIniciar" class="btn-iniciar">🎵 Reproducir</button>
+        </div>
+    </div>
+    
+    <!-- Video de fondo desde Cloudinary -->
+    <iframe 
+        id="videoFondo"
+        src="https://player.cloudinary.com/embed/?cloud_name=da4qoxoyg&public_id=Pink_Panther_Christmas_-_Carol_Of_The_Bells_480P_wkz0kw&profile=cld-default&autoplay=true&loop=true&muted=true&controls=false" 
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+        allowfullscreen 
+        frameborder="0">
+    </iframe>
+    
+    <div class="container">
+        <h1 id="by" >By DevLopez Developers 2025</h1>
+        <canvas id="arbolCanvas"></canvas>
+    </div>
+    
+    <!-- Audio de fondo desde Cloudinary -->
+    <audio id="musicaNavidad" loop>
+        <source src="https://res.cloudinary.com/da4qoxoyg/video/upload/v1766621020/Musica_Navide%C3%B1a_De_La_Pantera_Rosa_-_Carol_of_The_Bells_christmas_yms9wz.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    
+    <!-- Botón para controlar audio (algunos navegadores requieren interacción) -->
+    <button id="toggleAudio" class="audio-btn">
+        <span id="audioIcon">🔊</span>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
